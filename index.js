@@ -17,6 +17,7 @@ let department = new HospitalDepartment("Cardiology");
 department.addDoctor(doctor);
 
 let newService = new Service(SERVICE_INFORMATION["NAME"], SERVICE_INFORMATION["PRICE"], SERVICE_INFORMATION["DATE"]);
+let newService2 = new Service(SERVICE_INFORMATION["NAME"], SERVICE_INFORMATION["PRICE"], "2025-3-30");
 
 department.addPatient(patient);
 
@@ -35,5 +36,9 @@ console.log();
 console.log(doctor.patient_list);
 console.log();
 console.log(patient.current_state);
+patient.reserveCheckup(doctor, newService2);
+console.log(doctor.patient_list);
+patient.reserveCheckup(doctor, newService);
+console.log(doctor.patient_list);
 patient.cancelCheckup(doctor, newService);
 console.log(doctor.patient_list);

@@ -1,8 +1,8 @@
 export class Service {
     constructor(name_of_service, price, date_of_service) {
-        this.name_of_service=name_of_service;
-        this.price=price;
-        this.date_of_service=date_of_service;
+        this.name_of_service = name_of_service;
+        this.price = price;
+        this.date_of_service = date_of_service;
     }
 
     showServiceInformation() {
@@ -13,5 +13,9 @@ export class Service {
 
     getServiceName() {
         return this.name_of_service;
+    }
+
+    getServiceDate() {
+        return this.date_of_service;
     }
 }

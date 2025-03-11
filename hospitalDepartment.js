@@ -1,8 +1,8 @@
 export class HospitalDepartment {
     constructor(department_name) {
-        this.department_name=department_name;
-        this.list_of_patients=[];
-        this.list_of_doctors=[];
+        this.department_name = department_name;
+        this.list_of_patients = [];
+        this.list_of_doctors = [];
     }
 
     addPatient(patient) {
