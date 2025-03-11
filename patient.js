@@ -16,18 +16,18 @@ export class Patient extends Person {
             
             if (element == `${fullName}, ${service.getServiceName()}, ${service.getServiceDate()}`) {
                 counter ++;
-                dateOfProcedure = element.split(",")[2];
+                dateOfProcedure = element.split(",")[2].trim();
             }
         }
         if (counter == 0) {
         doctor.getPatientList().push(`${fullName}, ${service.getServiceName()}, ${service.getServiceDate()}`);
         }
         else {
-            if(service.getServiceDate == dateOfProcedure) {
-                doctor.getPatientList().push(`${fullName}, ${service.getServiceName()}, ${service.getServiceDate()}`);
+            if(service.getServiceDate() == dateOfProcedure) {
+                console.log("Appointment already made during the same date");
             }
             else {
-                console.log("Appointment already made during the same date");
+                doctor.getPatientList().push(`${fullName}, ${service.getServiceName()}, ${service.getServiceDate()}`);
             }
         }
     }
