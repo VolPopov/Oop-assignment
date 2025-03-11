@@ -35,3 +35,5 @@ console.log();
 console.log(doctor.lista_pacijenata);
 console.log();
 console.log(patient.trenutno_stanje);
+patient.otkaziPregled(doctor, novaUsluga);
+console.log(doctor.lista_pacijenata);

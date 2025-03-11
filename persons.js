@@ -26,6 +26,15 @@ export class Pacijent extends Osoba {
         lekar.getPatientList().push(`${fullName}, ${usluga.getServiceName()}`);
     }
 
+    otkaziPregled(lekar, usluga) {
+        let fullName = `${this.ime} ${this.prezime}, ${usluga.getServiceName()}`;
+        for(let i = 0; i<lekar.getPatientList().length; i++) {
+            if(lekar.getPatientList()[i] == fullName) {
+                lekar.getPatientList().splice(i, 1);
+            }
+        }
+    }
+
     prikaziIstorijuBolesti() {
         console.log(`Istorija bolesti: ${this.istorija_bolesti}`);
     }
