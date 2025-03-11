@@ -1,4 +1,4 @@
-export const PATIENT_INFORMATION = {
+const PATIENT_INFORMATION = {
     NAME: "Marko", 
     SURNAME: "Petrović", 
     DATE_OF_BIRTH: "1990-03-15", 
@@ -8,7 +8,7 @@ export const PATIENT_INFORMATION = {
     ALERGIES: "Penicilin",
 }
 
-export const DOCTOR_INFORMATION = {
+const DOCTOR_INFORMATION = {
     NAME: "Jovana", 
     SURNAME: "Ilić", 
     DATE_OF_BIRTH: "1970-01-01", 
@@ -16,15 +16,17 @@ export const DOCTOR_INFORMATION = {
     SPECIALIZATION: "Kardiolog"
 }
 
-let datum = new Date();
-let day = datum.getDate();
-let month = datum.getMonth() + 1;
-let year = datum.getFullYear();
+let date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
 
 let today = `${year}-${month}-${day}`;
 
-export const SERVICE_INFORMATION = {
+const SERVICE_INFORMATION = {
     NAME: "EKG Test", 
     PRICE: "5000 RSD", 
     DATE: today,
 }
+
+export {PATIENT_INFORMATION, DOCTOR_INFORMATION, SERVICE_INFORMATION}
